@@ -72,7 +72,7 @@ De uma forma geral, vamos tentar <ins>definir</ins> e <ins>caracterizar</ins> al
 | Boot volume           |                                 |                                 |
 
 
-#### b. Configurar regras de firewall acesso Security List 
+#### b. Configurar regras de firewall da virtual cloud network e acesso ao Security List
 
 #### c. Configurar regras de firewall no Linux da instância
 
@@ -118,9 +118,9 @@ De uma forma geral, vamos tentar <ins>definir</ins> e <ins>caracterizar</ins> al
   * `46:05` Acessando os serviços pelo menu hamburger superior esquerdo, criando uma VM instance: name, compartment(equivale a GPC Project ou AWS ResourceGroup, relaciona custos, segurança, etc), escolhendo o shape da VM = Always Free, escolhendo imagem do SO
   * `53:50` Imagem Oracle Linux Cloud Developer - stack empacotada com diversas ferramentas desenvolvimento: Ruby, Java, Python, .Net Core, Terraform
   * `57:30` Configurando infraestrutura de rede VCN, IP, subnet, etc
-  * `1:00:15´ Configuração pode ser salva como recurso para ser gerenciado pelo Terraform ou Resource Manager (Oracle)
-  * `1:03:15´ Acessando máquina criada para configurar as regras de firewall dentro da subnet. Default security list, input and output rules, ssh port, http port, etc
-  * `1:08:40´ IP público precisa ser reservado, senão ele pode mudar
+  * `1:00:15` Configuração pode ser salva como recurso para ser gerenciado pelo Terraform ou Resource Manager (Oracle)
+  * `1:03:15` Acessando máquina criada para configurar as regras de firewall dentro da subnet. Default security list, input and output rules, ssh port, http port, etc
+  * `1:08:40` IP público precisa ser reservado, senão ele pode mudar
 
 * Github README.md writing sintax
   * [Basic Github Markdown Writing Format](https://docs.github.com/pt/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax)  
