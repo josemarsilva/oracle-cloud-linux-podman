@@ -3,8 +3,8 @@
 ## 1. Introdução
 
 Este repositório contém os artefatos do laboratório de avaliação  **oracle-cloud-linux-podman**  que consiste em:
-* Avaliar os recursos e funcionalidades
-* Explorar os recursos e funcionalidades
+* Avaliar e explorar os recursos e funcionalidades
+
 
 ## 2. Documentação
 
@@ -24,7 +24,7 @@ De uma forma geral, vamos tentar <ins>definir</ins> e <ins>caracterizar</ins> al
 
 | Termo       | Significado                     |
 | :---------- | :------------------------------ |
-| Compartment | É o agrupamento para organização lógica de permissões acessos e controle de custos. Equivale ao `project` do Google Cloud Platform ou `Resource Group` da AWS. |
+| `Compartment` | É o agrupamento para organização lógica de permissões acessos e controle de custos. Equivale ao `project` do Google Cloud Platform ou `Resource Group` da AWS. |
 
 
 ## 3. Projeto
@@ -50,7 +50,9 @@ De uma forma geral, vamos tentar <ins>definir</ins> e <ins>caracterizar</ins> al
 
 ### 3.3. Guia de Implantação, Configuração e Instalação
 
-* *Step-01*: Logado no OCI - Oracle Cloud Infrastructure, na região desejada crie a instância com o shape *Always Free Eligible*, com a imagem do Oracle Linux 
+#### a. Criar Compute Instance Always Free Eligible Linux Oracle
+
+* _Step-01_: Logado no OCI - Oracle Cloud Infrastructure, na região desejada crie a instância com o shape *Always Free Eligible*, com a imagem do Oracle Linux 
   * No dashboard principal, escolha menu superior esquerdo `OCI :: Compute >> Instance` e clique `Create Instance`
     * No formulário `Create compute instance`, preencher os campos conforme abaixo, aceitando os defaults e expandindo as seções comprimidas:
 
@@ -69,8 +71,6 @@ De uma forma geral, vamos tentar <ins>definir</ins> e <ins>caracterizar</ins> al
 | Add SSH keys          |                                 |                                 |
 | Boot volume           |                                 |                                 |
 
-
-#### a. Criar Compute Instance Always Free Eligible Linux Oracle
 
 #### b. Configurar regras de firewall acesso Security List 
 
