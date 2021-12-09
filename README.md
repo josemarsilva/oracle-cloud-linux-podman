@@ -56,21 +56,25 @@ De uma forma geral, vamos tentar <ins>definir</ins> e <ins>caracterizar</ins> al
   * No dashboard principal, escolha menu superior esquerdo `OCI :: Compute >> Instance` e clique `Create Instance`
     * No formulário `Create compute instance`, preencher os campos conforme abaixo, aceitando os defaults e expandindo as seções comprimidas:
 
-| Seção / Campo         | Valor                           | Obs                             |
-| :---------------      | :------------------------------ | :------------------------------ |
-| Name                  | `oci-linux-podman`              |                                 |
-| Create in compartment |                                 | aceitar defaults                |
-| Placement             |                                 | aceitar defaults                |
-| Image                 | Oracle Linux 8                  | clicar `Change image` para escolher |
-| Shape / Instance Type | Virtual Machine                 |                                 |
-| Shape / Shape Series  | Ampere                          |                                 |
-| Shape / Shape Name    | VM.Standard.A1.Flex             |                                 |
-| Shape / OCPU          | 1                               |                                 |
-| Shape / Memory        | 6 GB                            |                                 |
-| Network               |                                 | aceitar defaults                |
-| Add SSH keys          |                                 |                                 |
-| Boot volume           |                                 |                                 |
+| Seção / Campo             | Valor                            | Obs                             |
+| :---------------          | :------------------------------  | :------------------------------ |
+| Name                      | `oci-linux-podman`               |                                 |
+| Create in compartment     |                                  | aceitar defaults                |
+| Placement                 |                                  | aceitar defaults                |
+| Image                     | Oracle Linux 8                   | clicar `Change image` para escolher |
+| Shape / Instance Type     | Virtual Machine                  |                                 |
+| Shape / Shape Series      | Ampere                           |                                 |
+| Shape / Shape Name        | VM.Standard.A1.Flex              |                                 |
+| Shape / OCPU              | 1                                |                                 |
+| Shape / Memory            | 6 GB                             |                                 |
+| Network                   |                                  | clicar `Edit`                   |
+| Network / Primary Network | Create new virtual cloud network |                                 |
+| Network / New virtual cloud network name | `vcn-podman`      |                                 |
+| Network / New subnet name | `podman-podman`                  |                                 |
+| Add SSH keys              |  `Generate a key pair for me`    | clicar `Save Private Key` e `Save Public Key` |                                |
+| Boot volume               | Desmarcar `Specify a custom boot volume size`, `Use in-transit encryption` e `Encrypt this volume with a key that you manage` |                                 |
 
+  * Clique no botão `Create` para concluir o processo de criação
 
 #### b. Configurar regras de firewall da virtual cloud network e acesso ao Security List
 
@@ -115,7 +119,7 @@ De uma forma geral, vamos tentar <ins>definir</ins> e <ins>caracterizar</ins> al
   * `35:10` Cloud Native and Devops: que ferramentas tem
   * `41:05` Importante pensar em nuvem de forma agnóstica e ter opções
   * `42:34` Login Single-Signon(SSO) após cadastro do Always Free, iniciando brincadeira e dashboard inicial
-  * `46:05` Acessando os serviços pelo menu hamburger superior esquerdo, criando uma VM instance: name, compartment(equivale a GPC Project ou AWS ResourceGroup, relaciona custos, segurança, etc), escolhendo o shape da VM = Always Free, escolhendo imagem do SO
+  * `46:05` Criando uma VM compute Instance: acessar serviços pelo menu hamburger superior esquerdo, criando uma VM instance: name, compartment(equivale a GPC Project ou AWS ResourceGroup, relaciona custos, segurança, etc), escolhendo o shape da VM = Always Free, escolhendo imagem do SO
   * `53:50` Imagem Oracle Linux Cloud Developer - stack empacotada com diversas ferramentas desenvolvimento: Ruby, Java, Python, .Net Core, Terraform
   * `57:30` Configurando infraestrutura de rede VCN, IP, subnet, etc
   * `1:00:15` Configuração pode ser salva como recurso para ser gerenciado pelo Terraform ou Resource Manager (Oracle)
